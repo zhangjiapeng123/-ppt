@@ -1,0 +1,50 @@
+三种版本管理系统
+
+1，本地版本管理系统    //游戏存档
+
+2，集中式版本管理系统   // svn cvs   缺点就是一定要联网，如果主机要是不工作了，其他的就共工作不了
+
+3，分布式版本管理系统   // git  // 使用的时候不需要联网 bitkeeper
+
+// git  !== github
+
+git config  配置
+
+git config --global user.name ""
+git config --global user.email ""
+
+//创建git仓库
+
+git init   //创建一个其实就在该文件夹创建一个 .git(隐藏的文件)
+bash 命令  类似于  cmd命令行 看文档
+
+//把项目列表添加到git仓库 两步骤
+1，git add 文件名
+2，git commit -m "解释"
+
+//仓库状态
+git status
+
+//git仓库日志
+git log
+
+git reset --hard HEAD (commitID)  HEAD当前版本  HEAD^ 前一个版本  HEAD~10
+
+git reflog
+
+克隆  
+git clone 'github地址'
+
+//注册github创建仓库     
+
+关联远程库
+git remote add origin  'github地址'
+
+上传/推送
+git push -u origin master  //第一次上传需要加 -u  之后就不需要添加 -u
+
+
+
+
+
+
