@@ -1,0 +1,27 @@
+全局安gulp
+1.安装模块（用哪个装那个）//需要使用命令行的cd切换到对应目录后进行安装操作
+
+2.获取gulp
+var gulp=require('gulp')
+
+3.获取minify-css模块（用于压缩CSS）
+var minifyCSS=require（'gulp-minify-css'）
+
+4.gulp.task('css',function(){
+	//找到文件
+	gulp.src('css/*.css')
+	//压缩文件
+	.pipe(minifyCSS())
+	//另存为压缩文件
+	.pipe(gulp.dest('dist/css'))
+})
+//在命令行使用gulp auto启动此任务
+
+gulp.task('auto',functio(){
+//监听文件修改，当文件被修改则执行css任务
+gulp.watch('css/*.css'['css'])
+});
+
+创建css文件
+
+运行命令行输入gulp查看结果
